@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///C:/Users/User/Desktop/Note/microservies/microservies/git-localconfig-repo
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, bus-refresh
+
